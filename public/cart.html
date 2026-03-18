@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Cart - RainCommerce</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(-45deg, #667eea, #764ba2, #8e44ad, #c471f5);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    main.container {
+      margin-top: 3rem;
+      padding: 3rem;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    h2, h3 {
+      color: #7b2cbf;
+      font-weight: 700;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 1.5rem;
+      align-items: center;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+
+    .cart-item img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #7b2cbf;
+      font-size: 1.1rem;
+    }
+
+    footer { color: white; margin-top: 3rem; }
+    footer a { color: white; }
+  </style>
+</head>
+<body>
+
+<nav class="container-fluid">
+  <ul>
+    <li><strong style="color:rgb(230, 242, 10);">RainCommerce</strong></li>
+  </ul>
+  <ul>
+    <li><a href="index.html" style="color:white;">Home</a></li>
+    <li><a href="checkout.html">Checkout</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <div class="grid">
+    <section>
+
+      <h2>Your Shopping Cart</h2>
+
+      <div class="cart-item">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=60" alt="Headphones">
+        <div>
+          <h4>Wireless Headphones</h4>
+          <p>Noise cancelling premium sound.</p>
+          <p class="price">₹800</p>
+        </div>
+        <button>Remove</button>
+      </div>
+
+      <div class="cart-item">
+        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=60" alt="Smart Watch">
+        <div>
+          <h4>Smart Watch</h4>
+          <p>Health tracking and notifications.</p>
+          <p class="price">₹1500</p>
+        </div>
+        <button>Remove</button>
+      </div>
+
+      <hr>
+      <h3>Total: ₹2800</h3>
+      <a href="checkout.html" role="button" style="width:100%;">Proceed to Checkout</a>
+
+    </section>
+  </div>
+</main>
+
+<footer class="container">
+  <small>
+    <a href="#">Privacy Policy</a> • <a href="#">Terms and conditions</a>
+  </small>
+</footer>
+
+</body>
+</html>

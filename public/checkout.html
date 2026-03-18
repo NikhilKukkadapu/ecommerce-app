@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout - RainCommerce</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+
+  <style>
+    body {
+      background: linear-gradient(-45deg, #667eea, #764ba2, #8e44ad, #c471f5);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    main.container {
+      margin-top: 3rem;
+      padding: 3rem;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    h2, h3 {
+      color: #7b2cbf;
+      font-weight: 700;
+    }
+
+    .checkout-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 2rem;
+    }
+
+    .order-summary {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .summary-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .summary-item img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    footer { color: white; margin-top: 3rem; }
+    footer a { color: white; }
+  </style>
+</head>
+<body>
+
+<nav class="container-fluid">
+  <ul>
+    <li><strong style="color:white;">RainCommerce</strong></li>
+  </ul>
+  <ul>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <h2>Secure Checkout</h2>
+
+  <div class="checkout-grid">
+
+    <!-- Billing Form -->
+    <div>
+      <h3>Billing Information</h3>
+      <form class="grid">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Shipping Address" required>
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="ZIP Code" required>
+        <input type="text" placeholder="Card Number" required>
+        <input type="text" placeholder="Expiry Date" required>
+        <input type="text" placeholder="CVV" required>
+        <button type="submit" onclick="event.preventDefault()">Place Order</button>
+      </form>
+    </div>
+
+    <!-- Order Summary -->
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+
+      <div class="summary-item">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=400&q=60">
+        <div>
+          <p>Wireless Headphones</p>
+          <small>₹800</small>
+        </div>
+      </div>
+
+      <div class="summary-item">
+        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?auto=format&fit=crop&w=400&q=60">
+        <div>
+          <p>Smart Watch</p>
+          <small>₹1500</small>
+        </div>
+      </div>
+
+      <hr>
+      <h4>Total: ₹2800</h4>
+    </div>
+
+  </div>
+</main>
+
+<footer class="container">
+  <small>
+    <a href="#">Privacy Policy</a> • <a href="#">Terms</a>
+  </small>
+</footer>
+
+</body>
+</html>
